@@ -8,11 +8,17 @@
 
 puts 'Cleaning database...'
 Duck.destroy_all
+User.destroy_all
 
 
+#create users
+user = User.create(email: "duckman@duck.com", password: "123456")
+
+
+#use created user to create ducks
 puts 'Creating ducks...'
-drake = { name: "Drake", description: 'questionqbly sings', price: 3, location: 'usa', user_id: 1 }
-tupac = { name: "2pac", description: 'master singer', price: 5, location: 'californication', user_id: 1 }
+drake = { name: "Drake", description: 'questionqbly sings', price: 3, location: 'usa', user: user }
+tupac = { name: "2pac", description: 'master singer', price: 5, location: 'californication', user: user }
 
 [drake, tupac].each do |attributes|
   duck = Duck.create!(attributes)
