@@ -7,9 +7,12 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "components/navbar_new"
+
+// COMPONENTS
+@import "components/navbar_new";
+@import "components/card";
