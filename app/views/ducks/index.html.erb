@@ -1,2 +1,6 @@
-<h1> Find your duck 🐥</h1>
 
+<h1> Find your duck 🐥</h1>
+<% @ducks.each do |duck| %>
+<li> <%= link_to duck.name, duck_path(duck) %></li>
+<% end %>
+</ul>
