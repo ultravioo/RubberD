@@ -1,5 +1,3 @@
-
-
 body {
   background-color: #ffd100;
 }
@@ -24,7 +22,7 @@ a {
 }
 
 .nav-logo {
-  background-image: url(images/logo-duck-1-no-background.png);
+  background-image: url(https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 140px;
@@ -32,21 +30,14 @@ a {
   border-right: 5px solid black;
 }
 
-
-.nav-title-container{
-  height: 100%;
+.nav-title-container {
+  height: 100px;
   margin: 0 auto;
 }
 
-
 .nav-title-text {
-
-    font-size: 140px;
-    line-height: 140px;
-
-
-
-
+  font-size: 140px;
+  line-height: 140px;
 }
 
 .nav-bottom {
