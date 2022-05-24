@@ -1,0 +1,39 @@
+.description {
+  position: absolute;
+  left: 32.12%;
+  right: 1.03%;
+  top: 0%;
+  bottom: 48.23%;
+}
+
+.rectangle {
+  box-sizing: border-box;
+
+position: absolute;
+width: 367.87px;
+height: 250px;
+left: 703px;
+top: 38px;
+
+background: #FFFFFF;
+border: 5px solid #000000;
+}
+
+.name {
+  position: absolute;
+width: 711px;
+height: 316px;
+left: -8px;
+top: 0px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 123px;
+line-height: 149px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+}
