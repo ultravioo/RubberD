@@ -3,4 +3,4 @@
 <%= @duck.description %>
 <%= @duck.price %>
 <%= @duck.location %>
-
+<%= cl_image_tag @duck.photo.key, width: 400, height: 300, crop: :fill %>
