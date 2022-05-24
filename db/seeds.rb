@@ -13,6 +13,14 @@ Duck.destroy_all
 puts 'Creating ducks...'
 drake = { name: "Drake", description: 'questionqbly sings', price: 3, location: 'usa', user_id: 1 }
 tupac = { name: "2pac", description: 'master singer', price: 5, location: 'californication', user_id: 1 }
+batman =
+devil =
+donald =
+french =
+helicopter =
+italian =
+liberty =
+sun=
 
 [drake, tupac].each do |attributes|
   duck = Duck.create!(attributes)
