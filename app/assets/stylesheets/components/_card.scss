@@ -4,11 +4,16 @@ p {
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: black;
 }
 
 body {
   background-color: #ffd100;
-  // background-image: url(images/Frame.svg);
+  background-image: url(https://res.cloudinary.com/rubberd/image/upload/v1653406754/Frame_ek6cra.svg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -96,6 +101,7 @@ body {
 
 .name-duck:hover {
   transform: translate(-10px, -10px);
+  color: black;
 }
 
 .name-duck-text {
@@ -139,6 +145,13 @@ body {
   right: 5px;
 }
 
+.reviews-title {
+  font-weight: 600;
+  font-size: 35px;
+  margin: 0;
+  line-height: 50px;
+}
+
 .score {
   display: flex;
   flex-direction: row;
@@ -165,12 +178,6 @@ body {
   }
 }
 
-.reviews-title {
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 40px;
-}
-
 .description {
   margin-top: 15px;
   font-weight: 400;
@@ -190,19 +197,19 @@ body {
   bottom: 30px;
   right: 30px;
   text-align: center;
+  margin: 0;
 }
 
 .location-price-text {
   display: flex;
   justify-content: space-around;
   align-self: center;
-  font-size: 30px;
-  line-height: 50px;
   font-weight: normal;
 }
 
 .location-price-text-a {
   color: black;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 500;
+  line-height: 35px;
 }
