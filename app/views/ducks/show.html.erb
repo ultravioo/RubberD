@@ -1,22 +1,38 @@
-<div class="body">
-  <div class="right">
-    <div class=description_card>
-        <%= @duck.name %>
-        <%= @duck.description %>
+<div class="container-page-show">
+
+<div class="left">
+    <div class="photo-container border-show">
+      <div class="background-orange border-show"></div>
+      <div class="photo-container-show border-show"><%=cl_image_tag @duck.photo.key, class:"photo-show "%></div>
     </div>
-    <div class="map">
+
+    <div class="review-show border-show" >
+            <p class="reviews-title-show">Reviews:</p>
+            <div class="score">
+              <img src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png" alt="rubber" class="review-score">
+              <img src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png" alt="rubber" class="review-score">
+              <img src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png" alt="rubber" class="review-score">
+              <img src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png" alt="rubber" class="review-score">
+              <img src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png" alt="rubber" class="review-score">
+            </div>
     </div>
+
+    <div class="price-show border-show">
+      <p class="location-price-show"><%= @duck.location %></p>
+      <p class="location-price-show"><%= @duck.price %></p>
+    </div>
+</div>
+
+<div class="right">
+  <div class="description-card-show border-show ">
+    <div class="duck-name-show"><p><%= @duck.name %></p></div>
+    <div class="description-show border-show"> <%= @duck.description %></div>
+
   </div>
-  <div class="left">
-    <div class="photo">
-    <%= cl_image_tag @duck.photo.key, width: 400, height: 300, crop: :fill %>
-    </div>
-    <div class="review">
-    <%= "Review" %>
-    </div>
-    <div class="price">
-    <%= @duck.location %>
-    <%= @duck.price %>
-    </div>
+
+  <div class="map border-show">
+  <p> Map </p>
   </div>
+</div>
+
 </div>
