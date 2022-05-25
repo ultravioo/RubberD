@@ -1,4 +1,4 @@
-.container-login{
+.container-signup{
   width: 50%;
   margin: 30px auto;
   padding: 25px;
@@ -7,30 +7,31 @@
   font-size: 20px;
 }
 
-.title-login{
+.title-signup{
   font-size: 30px;
   font-weight: 600;
   width: 100%;
   text-align: center;
 }
 
-#user_email,
-#user_password {
-border: 5px solid black;
-}
-
-#button_login{
+#button_signup{
   border: 5px solid black;
   width: 150px;
   font-size: 20px;
 }
 
-// #forgot-link{
-//   border: 5px solid black;
-// }
-#signup-link{
+#login-link{
   border: 5px solid black;
   font-size: 20px;
   margin-top: 15px;
   width: 150px;
+}
+
+#user_password_confirmation{
+  border: 5px solid black;
+
+}
+
+#min-characters{
+  color: black;
 }
