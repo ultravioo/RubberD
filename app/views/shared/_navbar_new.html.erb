@@ -10,8 +10,12 @@
     <div class="nav-bottom">
       <div class="nav-orange"></div>
       <div class="nav-buttons">
-        <a href="#" class="nav-button-link">HOME</a>
-        <a href="#" class="nav-button-link">SIGN IN</a>
+        <%= link_to "HOME", root_path, class: "nav-button-link" %>
+        <%= link_to "INDEX", ducks_path, class: "nav-button-link" %>
+        <% if user_signed_in? == false %>
+        <%= link_to "SIGN IN", new_user_session_path, class: "nav-button-link" %>
+        <% end %>
+        <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete, class: "nav-button-link" %>
       </div>
     </div>
   </div>
