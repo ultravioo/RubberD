@@ -1,4 +1,6 @@
 class DucksController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+
   def index
     @ducks = policy_scope(Duck)
   end

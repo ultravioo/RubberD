@@ -14,8 +14,11 @@
         <%= link_to "INDEX", ducks_path, class: "nav-button-link" %>
         <% if user_signed_in? == false %>
         <%= link_to "SIGN IN", new_user_session_path, class: "nav-button-link" %>
+        <%= link_to "SIGN UP", new_user_registration_path, class: "nav-button-link" %>
         <% end %>
+        <% if user_signed_in? %>
         <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete, class: "nav-button-link" %>
+        <% end %>
       </div>
     </div>
   </div>

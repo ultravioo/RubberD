@@ -1,1 +1,69 @@
 // Specific CSS for your home-page
+.big-nav-container {
+background-color: #ff7742;
+width: 100vw;
+height: 100vh;
+}
+
+.big-nav-stripes {
+  background-image: url(https://res.cloudinary.com/rubberd/image/upload/v1653406754/Frame_ek6cra.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 89vh;
+  border-bottom: 5px solid black;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0px;
+}
+
+.big-nav-title {
+  display: flex;
+  background-color: #ff7742;
+  height: 200px;
+  width: 600px;
+  border: 5px solid white;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 140px;
+    font-weight: 900;
+  }
+}
+
+.big-nav-button {
+  display: flex;
+  background-color: #ff7742;
+  height: 80px;
+  width: 250px;
+  border: 5px solid black;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  h2 {
+    font-weight: 900;
+  }
+}
+
+.big-nav-ducks {
+  display: flex;
+  justify-content: center;
+}
+
+.inverted-duck {
+  transform: scaleX(-1);
+}
+
+.larger-rent {
+  width: 350px;
+}
+
+.duck-font {
+  font-weight: 900;
+  font-size: 30px;
+}
