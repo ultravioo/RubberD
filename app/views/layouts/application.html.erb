@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RubberD</title>
+    <title>DRAKE</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    >
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+    >
+    <link rel="icon"
+    href="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png" type="image/x-icon">
   </head>
 
   <body>
-  <%= render 'shared/navbar_new' unless controller_name == 'pages' && action_name == "home" %>
+    <%= render 'shared/navbar_new' unless controller_name == 'pages' && action_name == "home" %>
     <%= yield %>
-  <%= render 'shared/footer' unless controller_name == 'pages' && action_name == "home" %>
+    <%= render 'shared/footer' unless controller_name == 'pages' && action_name == "home" %>
   </body>
 </html>
