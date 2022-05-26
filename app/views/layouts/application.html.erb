@@ -10,10 +10,12 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
   </head>
 
   <body>
   <%= render 'shared/navbar_new' unless controller_name == 'pages' && action_name == "home" %>
     <%= yield %>
+  <%= render 'shared/footer' unless controller_name == 'pages' && action_name == "home" %>
   </body>
 </html>
