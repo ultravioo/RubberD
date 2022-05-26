@@ -7,6 +7,7 @@ class DucksController < ApplicationController
 
   def show
     @duck = Duck.find(params[:id])
+    @booking = Booking.new
     authorize @duck
     @markers = @duck.geocode.map do
       {

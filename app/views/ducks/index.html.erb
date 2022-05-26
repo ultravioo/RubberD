@@ -6,9 +6,9 @@
     <div class="container-inner">
       <!-- rubber duck image -->
       <!-- link to the show -->
-      <a href="#">
+      <%= link_to duck_path(duck) do %>
         <%= cl_image_tag duck.photo.key, class: "img" %>
-      </a>
+      <% end %>
       <!-- container reviews and description  -->
       <div class="container-details">
         <!-- link to the show -->
