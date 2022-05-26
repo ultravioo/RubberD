@@ -1,19 +1,18 @@
 // Specific CSS for your home-page
 .home-container {
-  height:100%;
+  height:100vh;
   width: 100vw;
   overflow: hidden;
 }
 
 .home-hero-container {
-  margin: 0 auto;
-  height: inherit;
-  border-bottom: 5px solid black;
-  margin-top: 30px;
+  // margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 88%;
+  width: 100%;
 }
 
 .home-hero-title {
@@ -41,8 +40,14 @@
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  transition: all 0.5s;
   h2 {
     font-weight: 900;
+    cursor: pointer;
+  }
+  &:hover  {
+	transform: translateY(-5px);
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
   }
 }
 
@@ -77,11 +82,8 @@
   height: 40px;
   width: 40px;
   display: flex;
-  padding-left: 5px;
-}
-
-.home-ducks-bottom {
-  transform: scaleX(-1);
+  // padding-left: 5px;
+  overflow: hidden;
 }
 
 .home-ducks-top:hover {
@@ -114,5 +116,25 @@
   }
   to {
     transform: rotate(0deg);
+  }
+}
+
+.home-hero-button-quack {
+  display: flex;
+  background-color: #ffd100;
+  height: 60px;
+  width: 160px;
+  border: 5px solid black;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 30px;
+  transition: all 0.5s;
+  &:hover  {
+	transform: translateY(-5px);
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
   }
 }
