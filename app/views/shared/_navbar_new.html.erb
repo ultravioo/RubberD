@@ -1,24 +1,26 @@
- <div class="nav-container">
-    <div class="nav-top">
+<div class="nav-container">
+  <div class="nav-top">
+    <div class="nav-logo-container">
       <div class="nav-logo"></div>
-      <div class="nav-title-container">
-        <h1 class="nav-title-text">
-          DRAKE
-        </h1>
-      </div>
     </div>
-    <div class="nav-bottom">
-      <div class="nav-orange"></div>
-      <div class="nav-buttons">
-        <%= link_to "HOME", root_path, class: "nav-button-link" %>
-        <%= link_to "INDEX", ducks_path, class: "nav-button-link" %>
-        <% if user_signed_in? == false %>
-        <%= link_to "LOG IN", new_user_session_path, class: "nav-button-link" %>
-        <%= link_to "SIGN UP", new_user_registration_path, class: "nav-button-link" %>
-        <% end %>
-        <% if user_signed_in? %>
-        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "nav-button-link" %>
-        <% end %>
-      </div>
+    <div class="nav-title-container">
+      <h1 class="nav-title-text">
+        DRAKE
+      </h1>
     </div>
   </div>
+  <div class="nav-bottom">
+    <div class="nav-orange"></div>
+    <div class="nav-buttons">
+      <%= link_to "HOME", root_path, class: "nav-button-link" %>
+      <%= link_to "INDEX", ducks_path, class: "nav-button-link" %>
+      <% if user_signed_in? == false %>
+        <%= link_to "LOG IN", new_user_session_path, class: "nav-button-link" %>
+        <%= link_to "SIGN UP", new_user_registration_path, class: "nav-button-link" %>
+      <% end %>
+      <% if user_signed_in? %>
+        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "nav-button-link" %>
+      <% end %>
+    </div>
+  </div>
+</div>

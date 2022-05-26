@@ -1,6 +1,9 @@
 {
   "name": "rubber-d",
   "private": true,
+  "workspaces": [
+    "app/*"
+  ],
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "^5.0.1",
     "@popperjs/core": "^2.11.5",
