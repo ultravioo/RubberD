@@ -8,6 +8,14 @@ class DucksController < ApplicationController
   def show
     @duck = Duck.find(params[:id])
     authorize @duck
+    @markers = @duck.geocode.map do
+      {
+        lat: @duck.latitude,
+        lng: @duck.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { duck: @duck }),
+        image_url: helpers.asset_url("https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png")
+      }
+    end
   end
 
   def new
