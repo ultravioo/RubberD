@@ -1,41 +1,36 @@
 // Specific CSS for your home-page
-.big-nav-container {
-background-color: #ff7742;
-width: 100vw;
-height: 100vh;
+.home-container {
+  height:100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
-.big-nav-stripes {
-  background-image: url(https://res.cloudinary.com/rubberd/image/upload/v1653406754/Frame_ek6cra.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 89vh;
-  border-bottom: 5px solid black;
-  margin-top: 30px;
+.home-hero-container {
+  // margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 0px;
+  height: 88%;
+  width: 100%;
 }
 
-.big-nav-title {
+.home-hero-title {
   display: flex;
   background-color: #ff7742;
-  height: 200px;
-  width: 600px;
+  height: 250px;
+  width: 750px;
   border: 5px solid white;
   color: white;
   justify-content: center;
   align-items: center;
   h1 {
-    font-size: 140px;
+    font-size: 190px;
     font-weight: 900;
   }
 }
 
-.big-nav-button {
+.home-hero-button {
   display: flex;
   background-color: #ff7742;
   height: 80px;
@@ -45,18 +40,32 @@ height: 100vh;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  transition: all 0.5s;
   h2 {
     font-weight: 900;
+    cursor: pointer;
+  }
+  &:hover  {
+	transform: translateY(-5px);
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
   }
 }
 
-.big-nav-ducks {
+.home-ducks {
   display: flex;
   justify-content: center;
+  background-color: #ff7742;
+  border-bottom: 5px solid black;
 }
 
-.inverted-duck {
-  transform: scaleX(-1);
+.home-ducks-bottom-container {
+  display: flex;
+  justify-content: center;
+  background-color: #ff7742;
+  border-top: 5px solid black;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 }
 
 .larger-rent {
@@ -66,4 +75,66 @@ height: 100vh;
 .duck-font {
   font-weight: 900;
   font-size: 30px;
+}
+
+.home-ducks-top,
+.home-ducks-bottom {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  // padding-left: 5px;
+  overflow: hidden;
+}
+
+.home-ducks-top:hover {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: clockwiseSpin;
+  animation-timing-function: linear;
+}
+
+.home-ducks-bottom:hover {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: antiClockwiseSpin;
+  animation-timing-function: linear;
+}
+
+
+@keyframes clockwiseSpin {
+  from  {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes antiClockwiseSpin {
+  from  {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.home-hero-button-quack {
+  display: flex;
+  background-color: #ffd100;
+  height: 60px;
+  width: 160px;
+  border: 5px solid black;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 30px;
+  transition: all 0.5s;
+  &:hover  {
+	transform: translateY(-5px);
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+  }
 }
