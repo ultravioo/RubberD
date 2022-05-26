@@ -16,22 +16,27 @@
               <img src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png" alt="rubber" class="review-score">
             </div>
     </div>
-
     <div class="price-show border-show">
-      <p class="location-price-show"><%= @duck.location %></p>
-      <p class="location-price-show"><%= @duck.price %></p>
+      <p class="location-price-show"> Location: <%= @duck.location %></p>
     </div>
+    <div class="price-show-euro border-show">
+      <p class="location-price-show"> Price: <%= @duck.price %> €</p>
+    </div>
+
 </div>
 
 <div class="right">
   <div class="description-card-show border-show ">
-    <div class="duck-name-show"><p><%= @duck.name %></p></div>
-    <div class="description-show border-show"> <%= @duck.description %></div>
-
+    <div class="duck-name-show">
+      <p><%= @duck.name %></p>
+    </div>
+    <div class="booking-b">
+      <button class="button-show">BOOK</button>
+      </div>
+  <div class="description-show border-show"> <%= @duck.description %></div>
   </div>
 
   <div class="map border-show">
-  <p> Map </p>
   </div>
 </div>
 
