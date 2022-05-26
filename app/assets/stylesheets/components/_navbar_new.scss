@@ -15,10 +15,15 @@ a {
 .nav-top {
   display: flex;
   flex-direction: row;
-  border-top: 5px solid black;
-  border-left: 5px solid black;
+  border: 5px solid black;
+  // height: 150px;
+  height: 75%;
+}
+
+.nav-logo-container {
+  background-color: white;
+  width: 155px;
   border-right: 5px solid black;
-  border-bottom: 5px solid black;
 }
 
 .nav-logo {
@@ -27,7 +32,7 @@ a {
   background-size: cover;
   height: 140px;
   width: 140px;
-  border-right: 5px solid black;
+  margin-left: 7.5px;
 }
 
 .nav-title-container {
@@ -36,22 +41,22 @@ a {
 }
 
 .nav-title-text {
-  font-size: 140px;
-  line-height: 140px;
+  font-size: 150px;
+  line-height: 145px;
 }
 
 .nav-bottom {
   display: flex;
   flex-direction: row;
+  border-bottom: 5px solid black;
   border-left: 5px solid black;
   border-right: 5px solid black;
-  border-bottom: 5px solid black;
 }
 
 .nav-orange {
   background-color: #ff7742;
   height: 45px;
-  width: 155px;
+  width: 172px;
   border-right: 5px solid black;
 }
 
