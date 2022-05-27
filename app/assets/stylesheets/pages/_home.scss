@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .home-container {
-  height:100vh;
+  height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
@@ -11,8 +11,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 88%;
+  // height: 88%;
+  height: 23vh;
   width: 100%;
+  position: absolute;
 }
 
 .home-hero-title {
@@ -24,10 +26,55 @@
   color: white;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
   h1 {
     font-size: 190px;
     font-weight: 900;
   }
+}
+.home-duck-animation {
+  display: flex;
+  justify-content: end;
+  height: 240px;
+  width: 740px;
+  position: relative;
+  z-index: -1;
+  top: 15.4vh;
+  // top: 12vh;
+  left: 26vw;
+  // background-color: red;
+  animation: ease-in-out;
+  animation: homeDuck 10s infinite;
+  // animation-delay: 5s;
+}
+
+@keyframes homeDuck {
+  0% {
+    left: 26vw;
+  }
+  50% {
+    left: 26vw;
+  }
+  75% {
+    left: 36vw;
+  }
+  100% {
+    left: 26vw;
+  }
+}
+
+.home-duck-animation-img {
+  height: 242px;
+  // 45deg to put the transparent on the top right
+  background: linear-gradient(
+    45deg,
+    rgba(255, 117, 66, 1) 0%,
+    rgba(255, 117, 66, 1) 45%,
+    rgba(255, 117, 66, 0) 75%,
+    rgba(255, 209, 0, 0) 100%
+  );
+  border-bottom: 5px solid white;
 }
 
 .home-hero-button {
@@ -45,9 +92,9 @@
     font-weight: 900;
     cursor: pointer;
   }
-  &:hover  {
-	transform: translateY(-5px);
-	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -100,9 +147,8 @@
   animation-timing-function: linear;
 }
 
-
 @keyframes clockwiseSpin {
-  from  {
+  from {
     transform: rotate(0deg);
   }
   to {
@@ -111,7 +157,7 @@
 }
 
 @keyframes antiClockwiseSpin {
-  from  {
+  from {
     transform: rotate(360deg);
   }
   to {
@@ -133,8 +179,8 @@
   font-weight: 900;
   font-size: 30px;
   transition: all 0.5s;
-  &:hover  {
-	transform: translateY(-5px);
-	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
   }
 }
