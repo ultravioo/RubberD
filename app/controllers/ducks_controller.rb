@@ -8,6 +8,8 @@ class DucksController < ApplicationController
   def show
     @duck = Duck.find(params[:id])
     @booking = Booking.new
+    @review = Review.new
+    @reviews = @duck.reviews
     authorize @duck
     @markers = @duck.geocode.map do
       {
