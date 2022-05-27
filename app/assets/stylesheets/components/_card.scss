@@ -25,9 +25,26 @@ body {
   justify-content: space-evenly;
 }
 
+.hero-index {
+  margin: 0 auto;
+  width: 100vw;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffd100;
+  border-bottom: 5px solid black;
+}
+
+.hero-index-title {
+  font-weight: 700;
+  font-size: 100px;
+}
+
 .container-card:nth-child(even) {
   margin-top: 150px;
 }
+
 .container-card:nth-child(odd) {
   margin-top: 50px;
 }

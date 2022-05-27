@@ -31,7 +31,7 @@ donald = Duck.create(name: "Moritz", description: "This duck is quite old and fa
 url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653387521/RubberDs/6_dzzaul.jpg')
 donald.photo.attach(io: url, filename: '4.jpg', content_type: 'images/jpg')
 
-french = Duck.create(name: "Violette", description: 'This duck can only be fed with baguette or croissant. For better results, talk to this duck in French. Can be a bit fussy, but works very very well.', price: 5, location: 'Toulon', user: user)
+french = Duck.create(name: "Violette", description: 'This duck can only be fed with baguette or croissant. For better results, talk to this duck in French. ', price: 5, location: 'Toulon', user: user)
 url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653387520/RubberDs/7_vwnasg.jpg')
 french.photo.attach(io: url, filename: '4.jpg', content_type: 'images/jpg')
 
@@ -51,20 +51,21 @@ sun = Duck.create(name: "Tamara", description: 'This duck is always smiling and 
 url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653387521/RubberDs/11_tzzlzn.jpg')
 sun.photo.attach(io: url, filename: '4.jpg', content_type: 'images/jpg')
 
-kingon = Duck.create(name: "KinGon", description: "Experienced rubberduck. Could force you to go to 100 Montaditos. We don't actually know if this duck is spanish or english.", price: "10000000", location: 'London', user: user)
-url = URI.open('https://files.slack.com/files-pri/T02NE0241-F03H4NSLYBU/screenshot_2022-05-26_at_17.24.44.png')
+kingon = Duck.create(name: "KinGon", description: "Experienced and legendary rubberduck. Could force you to go to 100 Montaditos.", price: "10000000", location: 'London', user: user)
+url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653639299/RubberDs/Screenshot_2022-05-26_at_17.24.44_teq7at.png')
 kingon.photo.attach(io: url, filename: 'kingon.jpeg.jpg', content_type: 'images/jpg')
 
+
 juan = Duck.create(name: "Juan", description: 'The Juan and only. This duck comes from india and has multiple wives. Be careful! This duck could mess up your branches.', price: "23", location: 'India', user: user)
-url = URI.open('https://files.slack.com/files-pri/T02NE0241-F03H1SARNMT/juan.jpeg')
+url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653639299/RubberDs/juan_pt2p0t.jpg')
 juan.photo.attach(io: url, filename: 'juan.jpeg', content_type: 'images/jpg')
 
 fernando = Duck.create(name: "Fernando", description: 'Thinks he is pure backend but actually likes front-end. Looks like a dealer but is a hardworker. Becomes hulk when branches are messed up.', price: "50", location: 'Venezuela', user: user)
-url = URI.open('https://files.slack.com/files-pri/T02NE0241-F03HUL0NXT2/fernando.jpeg')
+url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653639299/RubberDs/fernando_lr11ac.jpg')
 fernando.photo.attach(io: url, filename: 'fernando.jpeg', content_type: 'images/jpg')
 
 marcos = Duck.create(name: "Marcos", description: "Might come back with glitter the next morning. Will randomly shout 'Caralho' when cannot find the solution to a problem.", price: "78", location: 'Venezuela', user: user)
-url = URI.open('https://files.slack.com/files-pri/T02NE0241-F03HUN11W56/marcos.png')
+url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653639300/RubberDs/marcos_wklyyr.png')
 marcos.photo.attach(io: url, filename: 'marcos.png', content_type: 'images/jpg')
 
 # [drake, batman, devil, donald, french, helicopter, italian, liberty, sun].each do |attributes|
