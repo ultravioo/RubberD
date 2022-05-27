@@ -211,8 +211,18 @@
     <div class="home-hero-button larger-rent">
       <%= link_to "Rent a Rubber Duck", ducks_path, class: "duck-font" %>
     </div>
+    <div data-controller="sound">
+      <audio
+        src="https://res.cloudinary.com/rubberd/video/upload/v1653655569/RubberDs/Duck_Quack_-_Sound_Effect_HD_z6jkba.mp3"
+      ></audio>
+    </div>
 
-    <button class="home-hero-button-quack">Quack!</button>
+    <button id="sound" class="home-hero-button-quack">Quack!</button>
+
+    <audio
+      id="audio"
+      src="https://res.cloudinary.com/rubberd/video/upload/v1653655569/RubberDs/Duck_Quack_-_Sound_Effect_HD_z6jkba.mp3"
+    ></audio>
 
   </div>
   <div class="home-ducks-bottom-container">
