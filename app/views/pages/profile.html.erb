@@ -1,13 +1,14 @@
 <div class="container-login" style="padding-bottom: 100px">
   <h2 class="title-login">PROFILE</h2>
-  <h3>EMAIL = <%= @user.email %></h3>
+  <h3>EMAIL =
+    <%= @user.email %></h3>
 
   <% @bookings.each do |booking| %>
-    <div class="container-card">
+    <div id="container-card">
       <!-- small container with white background -->
       <div class="container-inner">
         <!-- rubber duck image --> <!-- link to the show -->
-          <%= cl_image_tag booking.duck.photo.key, class: "img" %>
+        <%= cl_image_tag booking.duck.photo.key, class: "img" %>
         <!-- container reviews and description -->
         <div class="container-details">
           <!-- link to the show -->
