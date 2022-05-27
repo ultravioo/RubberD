@@ -49,7 +49,7 @@
 <div data-controller='date'>
 <%= simple_form_for [@duck, @booking], html: {style: "width:500px;"} do |f| %>
   <div class="form-floating">
-    <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker d-none"} %>
     <%= f.submit "Submit Booking", class: "button-show" %>
   </div>
 <% end %>
