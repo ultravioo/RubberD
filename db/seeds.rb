@@ -52,7 +52,7 @@ url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653387521/Rubb
 sun.photo.attach(io: url, filename: '4.jpg', content_type: 'images/jpg')
 
 kingon = Duck.create(name: "KinGon", description: "Experienced and legendary rubberduck. Could force you to go to 100 Montaditos.", price: "10000000", location: 'London', user: user)
-url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653639299/RubberDs/fernando_lr11ac.jpg')
+url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653639299/RubberDs/Screenshot_2022-05-26_at_17.24.44_teq7at.png')
 kingon.photo.attach(io: url, filename: 'kingon.jpeg.jpg', content_type: 'images/jpg')
 
 juan = Duck.create(name: "Juan", description: 'The Juan and only. This duck comes from india and has multiple wives. Be careful! This duck could mess up your branches.', price: "23", location: 'India', user: user)
