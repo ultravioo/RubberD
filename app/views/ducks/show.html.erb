@@ -65,7 +65,7 @@
       <%= simple_form_for [ @duck, @review ] do |f| %>
         <%= f.input :content, label: "Review" %>
         <%= f.input :rating, collection: (1..5).to_a, label: "Rating" %>
-        <%= f.submit "Submit review", class: "btn btn-warning" %>
+        <%= f.submit "Submit Review", class: "button-show", id:"btn-review-show" %>
       <% end %>
     </div>
   </div>
@@ -75,11 +75,12 @@
       <div class="duck-name-show">
         <p><%= @duck.name %></p>
       </div>
-      <div class="booking-b">
-        <button class="button-show">BOOK</button>
-      </div>
+      <%# <div class="booking-b"> %>
+      <%# <button class="button-show">BOOK</button> %>
+      <%# </div> %>
       <div class="description-show border-show">
-        <%= @duck.description %></div>
+        <%= @duck.description %>
+      </div>
     </div>
 
     <div class="map border-show">
@@ -90,10 +91,17 @@
         data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
       ></div>
     </div>
-
     <% @reviews.each do |review| %>
-      <%= review.content %>
-      <%= review.rating %>
+      <div class="container-comments">
+        <div class="container-rating-text">
+          <p class="title-rating">Rating:
+            <%= review.rating %></p>
+
+        </div>
+        <div class="container-review-text">
+          <%= review.content %>
+        </div>
+      </div>
     <% end %>
   </div>
 

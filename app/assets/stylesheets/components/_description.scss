@@ -28,21 +28,23 @@
   justify-content: space-between;
   align-items: center;
   background: #ffffff;
-  height: 280px;
+  height: 250px;
   padding: 15px;
 }
 
 .description-show {
   padding: 10px;
-  width: 600px;
-  height: 240px;
+  width: 550px;
+  height: 210px;
   font-size: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .map {
   height: 600px;
   background: #ffffff;
-  margin-top: 90px;
+  margin-top: 50px;
 }
 .rectangle {
   box-sizing: border-box;
@@ -235,8 +237,26 @@
 .container-rating {
   background-color: white;
   width: 353px;
-  height: 200px;
+  height: 225px;
   border: 5px solid black;
   margin-top: 75px;
-  padding: 5px;
+  padding: 15px;
+  font-weight: 600;
+}
+
+#btn-review-show {
+  width: 100%;
+}
+
+.container-comments {
+  background-color: white;
+  width: 100%;
+  border: 5px solid black;
+  padding: 15px;
+  margin-top: 35px;
+}
+
+.title-rating {
+  font-size: 30px;
+  font-weight: 600;
 }
