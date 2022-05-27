@@ -15,7 +15,7 @@ User.destroy_all
 # create users
 user = User.create(email: "duckman@duck.com", password: "123456", first_name: "Isa", last_name: "Lopez")
 user_two = User.create(email: "gon@duck.com", password: "123456", first_name: "Gonzalo", last_name: "Guerra")
-user_three = User.create(email: "andre@duck.com", password: "123456", first_name: "Andre", last_name: "Pires")
+user_three = User.create(email: "andre@duck.com", password: "123456", first_name: "Violette", last_name: "Dunoyer")
 
 # use created user to create ducks
 puts 'Creating ducks...'
