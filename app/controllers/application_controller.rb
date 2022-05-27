@@ -11,11 +11,11 @@ class ApplicationController < ActionController::Base
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
   end
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(*)
     ducks_path
   end
 
-  def after_sign_up_path_for(resource)
+  def after_sign_up_path_for(*)
     ducks_path
   end
 end
