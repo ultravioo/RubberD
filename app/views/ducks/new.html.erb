@@ -1,13 +1,26 @@
-<%= simple_form_for(@duck) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.label :price %>
-  <%= f.text_field :price %>
-  <%= f.label :location %>
-  <%= f.text_field :location %>
-  <%= f.label :photo %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="container-login">
+  <h2 class="title-login">CREATE YOUR DUCK</h2>
+
+  <%= simple_form_for(@duck) do |f| %>
+    <div class="form-inputs-login">
+      <%= f.input :name,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "name" }, class:"input-login", style:"border: 5px solid black;" %>
+      <%= f.input :description,
+                  required: true,
+                  input_html: { autocomplete: "description" }, id:"input-login", style:"border: 5px solid black;" %>
+      <%= f.input :price,
+                  required: true,
+                  input_html: { autocomplete: "price" }, id:"input-login", style:"border: 5px solid black;" %>
+      <%= f.input :location,
+                  required: false,
+                  input_html: { autocomplete: "location" }, id:"input-login", style:"border: 5px solid black;" %>
+      <%= f.input :photo, as: :file %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Create", id:"button-login" %>
+    </div>
+  <% end %>
+</div>
