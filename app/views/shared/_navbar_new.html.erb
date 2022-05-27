@@ -20,6 +20,8 @@
       <% end %>
       <% if user_signed_in? %>
         <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "nav-button-link" %>
+        <%= link_to "PROFILE", profile_path, class: "nav-button-link" %>
+        <%= link_to "RENT", new_duck_path, class: "nav-button-link" %>
       <% end %>
     </div>
   </div>
