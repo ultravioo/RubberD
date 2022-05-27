@@ -4,8 +4,10 @@ class BookingsController < ApplicationController
     @duck = Duck.find(params[:duck_id])
     @booking.user = current_user
     @booking.duck = @duck
+    authorize @booking
     @booking.save
     redirect_to ducks_path
+    @booking.status = "Yes"
   end
 
   private
