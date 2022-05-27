@@ -45,7 +45,7 @@
   left: 26vw;
   // background-color: red;
   animation: ease-in-out;
-  animation: homeDuck 10s infinite;
+  animation: homeDuck 7s infinite;
   // animation-delay: 5s;
 }
 
@@ -54,9 +54,6 @@
     left: 26vw;
   }
   50% {
-    left: 26vw;
-  }
-  75% {
     left: 36vw;
   }
   100% {
