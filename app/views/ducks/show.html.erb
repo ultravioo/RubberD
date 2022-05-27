@@ -1,56 +1,89 @@
 <div class="container-page-show">
 
-<div class="left">
+  <div class="left">
     <div class="photo-container border-show">
       <div class="background-orange border-show"></div>
-      <div class="photo-container-show border-show"><%=cl_image_tag @duck.photo.key, class:"photo-show "%></div>
+      <div class="photo-container-show border-show"><%= cl_image_tag @duck.photo.key, class:"photo-show " %></div>
     </div>
-
-    <div class="review-show border-show" >
-            <p class="reviews-title-show">Reviews:</p>
-            <div class="score">
-              <img src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png" alt="rubber" class="review-score">
-              <img src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png" alt="rubber" class="review-score">
-              <img src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png" alt="rubber" class="review-score">
-              <img src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png" alt="rubber" class="review-score">
-              <img src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png" alt="rubber" class="review-score">
-            </div>
-    </div>
-    <div class="price-show border-show">
-      <p class="location-price-show"> Location: <%= @duck.location %></p>
-    </div>
-    <div class="price-show-euro border-show">
-      <p class="location-price-show"> Price: <%= @duck.price %> €</p>
-    </div>
-
-</div>
-
-<div class="right">
-  <div class="description-card-show border-show ">
-    <div class="duck-name-show">
-      <p><%= @duck.name %></p>
-    </div>
-    <div class="booking-b">
-      <button class="button-show">BOOK</button>
+    <div class="container-card-show border-show">
+      <div class="review-show">
+        <%# <p class="reviews-title-show"></p> %>
+        <div class="score score-show">
+          <img
+            src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png"
+            alt="rubber"
+            class="review-score"
+          >
+          <img
+            src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png"
+            alt="rubber"
+            class="review-score"
+          >
+          <img
+            src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png"
+            alt="rubber"
+            class="review-score"
+          >
+          <img
+            src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png"
+            alt="rubber"
+            class="review-score"
+          >
+          <img
+            src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png"
+            alt="rubber"
+            class="review-score"
+          >
+        </div>
       </div>
-  <div class="description-show border-show"> <%= @duck.description %></div>
+      <div class="price-show">
+        <i class="fa-solid fa-location-dot location-icon"></i>
+        <div class="location-price-show">
+          <%= @duck.location %>
+        </div>
+      </div>
+      <div class="price-show-euro">
+        <p class="location-price-show">
+
+          <%= @duck.price %>€
+        </p>
+      </div>
+    </div>
+    <div class="calendar-container">
+      <div data-controller='date' class="calendar-with">
+        <%= simple_form_for [@duck, @booking], html: {style: "width:300px;"} do |f| %>
+          <div
+            class="form-floating calendar-with"
+            style="box-shadow: none; border: none;"
+          >
+            <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker d-none"} %>
+            <%= f.submit "Submit Booking", class: "button-show" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 
-  <div class="map border-show">
-  <div style="width: 100%; height: 100%;"
-  data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-  </div>
-</div>
+  <div class="right">
+    <div class="description-card-show border-show ">
+      <div class="duck-name-show">
+        <p><%= @duck.name %></p>
+      </div>
+      <div class="booking-b">
+        <button class="button-show">BOOK</button>
+      </div>
+      <div class="description-show border-show">
+        <%= @duck.description %></div>
+    </div>
 
-</div>
-
-<div data-controller='date'>
-<%= simple_form_for [@duck, @booking], html: {style: "width:500px;"} do |f| %>
-  <div class="form-floating">
-    <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker d-none"} %>
-    <%= f.submit "Submit Booking", class: "button-show" %>
+    <div class="map border-show">
+      <div
+        style="width: 100%; height: 100%;"
+        data-controller="mapbox"
+        data-mapbox-markers-value="<%= @markers.to_json %>"
+        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+    </div>
   </div>
-<% end %>
+
 </div>
