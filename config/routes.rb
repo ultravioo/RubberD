@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
+  get 'profile', to: 'pages#profile'
   resources :ducks, except: [:destroy] do
     resources :bookings, only: [:create]
   end

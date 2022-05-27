@@ -1,0 +1,70 @@
+<div class="container-login" style="padding-bottom: 100px">
+  <h2 class="title-login">PROFILE</h2>
+  <h3>EMAIL = <%= @user.email %></h3>
+
+  <% @bookings.each do |booking| %>
+    <div class="container-card">
+      <!-- small container with white background -->
+      <div class="container-inner">
+        <!-- rubber duck image --> <!-- link to the show -->
+          <%= cl_image_tag booking.duck.photo.key, class: "img" %>
+        <!-- container reviews and description -->
+        <div class="container-details">
+          <!-- link to the show -->
+          <a href="#">
+            <!-- title or name -->
+            <div class="name-duck">
+              <div class="name-duck-text">
+                <%= booking.duck.name %>
+              </div>
+            </div>
+          </a>
+          <!-- all the details -->
+          <div class="details">
+            <div class="reviews">
+              <p class="reviews-title">Reviews:</p>
+              <div class="score">
+                <img
+                  src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png"
+                  alt="rubber"
+                  class="review-score"
+                >
+                <img
+                  src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png"
+                  alt="rubber"
+                  class="review-score"
+                >
+                <img
+                  src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png"
+                  alt="rubber"
+                  class="review-score"
+                >
+                <img
+                  src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png"
+                  alt="rubber"
+                  class="review-score"
+                >
+                <img
+                  src="https://res.cloudinary.com/rubberd/image/upload/v1653397902/RubberDs/logo-duck-1-no-background_zf9e9q.png"
+                  alt="rubber"
+                  class="review-score"
+                >
+              </div>
+            </div>
+            <div class="description">
+              <p><%= booking.date %>
+              </p>
+            </div>
+          </div>
+          <!-- location and price -->
+          <div class="location-price">
+            <div class="location-price-text">
+              <p class="location-price-text-a"><%= booking.duck.location %></p>
+              <p class="location-price-text-a">€<%= booking.duck.price %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
