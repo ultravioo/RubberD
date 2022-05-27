@@ -1,0 +1,5 @@
+<ul class="list-group">
+  <% @duck.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.content %></li>
+  <% end %>
+</ul>
