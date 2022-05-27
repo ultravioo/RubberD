@@ -60,7 +60,7 @@ url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653639299/Rubb
 juan.photo.attach(io: url, filename: 'juan.jpeg', content_type: 'images/jpg')
 
 fernando = Duck.create(name: "Fernando", description: 'Thinks he is pure backend but actually likes front-end. Looks like a dealer but is a hardworker. Becomes hulk when branches are messed up.', price: "50", location: 'Venezuela', user: user)
-url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653639299/RubberDs/fernando_lr11ac.jpg')
+url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1653639299/RubberDs/fernando_lr11ac.jpggit')
 fernando.photo.attach(io: url, filename: 'fernando.jpeg', content_type: 'images/jpg')
 
 marcos = Duck.create(name: "Marcos", description: "Might come back with glitter the next morning. Will randomly shout 'Caralho' when cannot find the solution to a problem.", price: "78", location: 'Venezuela', user: user)
