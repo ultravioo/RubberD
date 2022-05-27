@@ -1,7 +1,7 @@
 <div class="container-login" style="padding-bottom: 100px">
   <h2 class="title-login">PROFILE</h2>
-  <h3>EMAIL =
-    <%= @user.email %></h3>
+  <h3>Hello <%= @user.email %> <%= @user.last_name %></h3>
+  <h3></h3>
 
   <% @bookings.each do |booking| %>
     <div id="container-card">
