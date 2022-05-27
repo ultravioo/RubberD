@@ -1,8 +1,11 @@
 <div class="container-login" style="padding-bottom: 100px">
   <h2 class="title-login">PROFILE</h2>
-  <h3>Hello <%= @user.email %> <%= @user.last_name %></h3>
+  <h3>Hello <%= @user.first_name %> <%= @user.last_name %>!</h3>
   <h3></h3>
 
+  <% unless @bookings.present? %>
+  <h3><%= "You have no pending bookings" %></h3>
+  <% else %>
   <% @bookings.each do |booking| %>
     <div id="container-card">
       <!-- small container with white background -->
@@ -67,5 +70,6 @@
         </div>
       </div>
     </div>
+  <% end %>
   <% end %>
 </div>
